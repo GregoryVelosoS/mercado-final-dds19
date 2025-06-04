@@ -25,10 +25,10 @@ export function useVerificaLogin() {
 
   const verificaLogin = (data) => {
     const userToFind = usuarios.find((user) => {
-      return user.email === data.email;
+      return user.email_usu === data.email;
     });
 
-    if (userToFind != undefined && userToFind.senha == data.senha) {
+    if (userToFind != undefined && userToFind.senha_usu == data.senha) {
       login(userToFind);
       console.log("Usuário logado", userToFind.nome);
       return "Login efetuado com sucesso";
